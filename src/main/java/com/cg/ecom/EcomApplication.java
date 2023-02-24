@@ -8,10 +8,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class ECOMAppApplication {
+public class EcomApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ECOMAppApplication.class, args);
+		SpringApplication.run(EcomApplication.class, args);
 	}
 
 }

@@ -20,27 +20,11 @@ public class ProductSupplierServiceImpl implements ProductSupplierService {
 	@Autowired
 	private ProductSupplierRepository productSupplierRepository;
 
-//	 public void  ProductSupplierDTO() {
-//	        for (int i = 100; i <= 200; i++) {
-//	        	ProductSupplier entity = new ProductSupplier();
-//	            int counter = 0;
-//				entity.setProductSupplierId(i);
-//	            // set other fields if necessary
-//				productSupplierRepository.save(entity);
-//	        }
-//	    }
 	
 	
 	@Override
 	public ProductSupplierDTO addProductSupplier(ProductSupplierDTO productSupplierDto) {
-
-//		User user=new User();
-//		user.setPassword(productSupplierDto.getPassword());
-//		user.setRole("OWNER");
-//		user.setUsername(productSupplierDto.getUsername());		
-
-//		User userSave=userRepository.save(user);
-		ProductSupplier productSupplier = new ProductSupplier();
+	ProductSupplier productSupplier = new ProductSupplier();
 //		productSupplier.setUserId(userSave);
 		productSupplier.setProductSupplierName(productSupplierDto.getProductSupplierName());
 		productSupplier.setEmailId(productSupplierDto.getEmailId());
@@ -89,13 +73,13 @@ public class ProductSupplierServiceImpl implements ProductSupplierService {
 			BeanUtils.copyProperties(productSupplier.get(), dto);
 			return dto;
 		}
-		throw new ProductSupplierNotAvailableException("ProductSupplierNotAvailable not Available");
+		throw new ProductSupplierNotAvailableException("ProductSupplierNotAvailable");
 	}
 
 	@Override
 	public List<ProductSupplierDTO> findAll() {
 
-		Iterable<ProductSupplier> productSupplier = productSupplierRepository.findAll();
+		List<ProductSupplier> productSupplier = productSupplierRepository.findAll();
 		List<ProductSupplierDTO> dtos = new ArrayList<>();
 		for (ProductSupplier productSupplier1 : productSupplier) {
 			ProductSupplierDTO dto = new ProductSupplierDTO();
