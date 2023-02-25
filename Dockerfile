@@ -1,4 +1,4 @@
-FROM openjdk:17
-EXPOSE 8084
-ADD target/ecommerce-docker.jar  ecommerce-docker.jar   
+FROM openjdk:8-jdk-alpine
+EXPOSE 8080
+COPY target/ecommerce-docker.jar  ecommerce-docker.jar   
 ENTRYPOINT ["java" ,"-jar", "/ecommerce-docker.jar"]  
