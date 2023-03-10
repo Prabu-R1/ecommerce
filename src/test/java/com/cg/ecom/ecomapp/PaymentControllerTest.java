@@ -36,7 +36,6 @@ public class PaymentControllerTest {
 
     @Before
     public void setUp() {
-        // Initialize test data
         paymentDTO = new PaymentDTO();
         paymentDTO.setPaymentStatus("Success");
         paymentDTO.setProductId(1);

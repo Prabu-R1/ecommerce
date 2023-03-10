@@ -112,15 +112,18 @@
 
 <profiles>
 <profile>
-      <id>sonar</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>fe27449e96fda9fdd7ac36063976341684430a79</sonar.login>
-      </properties>
-    </profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://192.168.2.174:9000
+</sonar.host.url>
+<sonar.login>c61016bf9cb76bdac6a41f9d055bfdfaa777e6d6</sonar.login>
+</properties>
+</profile>
 
 </profiles>
 
